@@ -27,12 +27,20 @@ function index() {
     // confirm delete modal
     const [showConfirmDelete, setShowConfirmDelete] = useState(false);
     useEffect(() => {
-        document.body.classList.toggle("overflow-y-hidden");
+        if (showConfirmDelete) {
+            document.body.classList.add("overflow-y-hidden");
+        } else {
+            document.body.classList.remove("overflow-y-hidden");
+        }
     }, [showConfirmDelete]);
 
     // full message modal
     useEffect(() => {
-        document.body.classList.toggle("overflow-y-hidden");
+        if (showFullMessage) {
+            document.body.classList.add("overflow-y-hidden");
+        } else {
+            document.body.classList.remove("overflow-y-hidden");
+        }
     }, [showFullMessage]);
 
     //Select all messages

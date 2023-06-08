@@ -7,7 +7,11 @@ import { useState, useEffect } from "react";
 function cart() {
     const [showOrderConfirmation, setShowOrderConfirmation] = useState(false);
     useEffect(() => {
-        document.body.classList.toggle("overflow-y-hidden");
+        if (showOrderConfirmation) {
+            document.body.classList.add("overflow-y-hidden");
+        } else {
+            document.body.classList.remove("overflow-y-hidden");
+        }
     }, [showOrderConfirmation]);
 
     const [total, setTotal] = useState<number>(0);

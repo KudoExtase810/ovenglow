@@ -27,7 +27,11 @@ function products({ allProducts }: props) {
     }, [products, query]);
 
     useEffect(() => {
-        document.body.classList.toggle("overflow-y-hidden");
+        if (showEditProduct) {
+            document.body.classList.add("overflow-y-hidden");
+        } else {
+            document.body.classList.remove("overflow-y-hidden");
+        }
     }, [showEditProduct]);
 
     return (

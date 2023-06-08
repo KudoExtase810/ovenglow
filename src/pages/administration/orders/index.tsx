@@ -11,7 +11,11 @@ function index() {
 
     // full message modal
     useEffect(() => {
-        document.body.classList.toggle("overflow-y-hidden");
+        if (showFullOrder) {
+            document.body.classList.add("overflow-y-hidden");
+        } else {
+            document.body.classList.remove("overflow-y-hidden");
+        }
     }, [showFullOrder]);
 
     if (!orders) return null;
