@@ -33,7 +33,7 @@ export const getServerSideProps = async (
             },
         };
     }
-    const URL = `${process.env.NEXT_PUBLIC_BASE_URL}/api/general/location`;
+    const URL = `https://ovenglow.vercel.app/api/general/location`;
     const response = await axios.get(URL);
 
     return {

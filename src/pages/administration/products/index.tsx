@@ -83,7 +83,7 @@ export const getServerSideProps = async (
     }
 
     const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/products`
+        `https://ovenglow.vercel.app/api/products`
     );
     const products = response.data;
     return {

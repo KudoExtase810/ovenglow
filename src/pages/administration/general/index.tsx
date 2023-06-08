@@ -20,7 +20,7 @@ function general({ locationName }: props) {
 export const getServerSideProps = async (
     context: GetServerSidePropsContext
 ) => {
-    const URL = `${process.env.NEXT_PUBLIC_BASE_URL}/api/general/location`;
+    const URL = `https://ovenglow.vercel.app/api/general/location`;
     const response = await axios.get(URL);
 
     const session = await getSession(context.res);

@@ -16,12 +16,12 @@ function shop({ products, categories }: props) {
 
 export async function getServerSideProps() {
     const response1 = await axios.get(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/products`
+        `https://ovenglow.vercel.app/api/products`
     );
     const products = response1.data;
 
     const response2 = await axios.get(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/general/categories`
+        `https://ovenglow.vercel.app/api/general/categories`
     );
     const categories = response2.data.categories;
     return {
