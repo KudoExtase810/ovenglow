@@ -14,7 +14,7 @@ function shop({ products, categories }: props) {
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const response1 = await axios.get(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/products`
     );
